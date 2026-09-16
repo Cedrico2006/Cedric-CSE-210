@@ -1,0 +1,15 @@
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\bin\Debug\net10.0\Learning02.exe
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\bin\Debug\net10.0\Learning02.deps.json
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\bin\Debug\net10.0\Learning02.runtimeconfig.json
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\bin\Debug\net10.0\Learning02.dll
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\bin\Debug\net10.0\Learning02.pdb
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\obj\Debug\net10.0\Learning02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\obj\Debug\net10.0\Learning02.AssemblyInfoInputs.cache
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\obj\Debug\net10.0\Learning02.AssemblyInfo.cs
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\obj\Debug\net10.0\Learning02.csproj.CoreCompileInputs.cache
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\obj\Debug\net10.0\Learning02.sourcelink.json
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\obj\Debug\net10.0\Learning02.dll
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\obj\Debug\net10.0\refint\Learning02.dll
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\obj\Debug\net10.0\Learning02.pdb
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\obj\Debug\net10.0\Learning02.genruntimeconfig.cache
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prepare\Learning02\obj\Debug\net10.0\ref\Learning02.dll

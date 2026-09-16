@@ -1,0 +1,15 @@
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\bin\Debug\net10.0\Prep1.exe
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\bin\Debug\net10.0\Prep1.deps.json
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\bin\Debug\net10.0\Prep1.runtimeconfig.json
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\bin\Debug\net10.0\Prep1.dll
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\bin\Debug\net10.0\Prep1.pdb
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.AssemblyInfoInputs.cache
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.AssemblyInfo.cs
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.csproj.CoreCompileInputs.cache
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.sourcelink.json
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.dll
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\obj\Debug\net10.0\refint\Prep1.dll
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.pdb
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.genruntimeconfig.cache
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\csharp-prep\Prep1\obj\Debug\net10.0\ref\Prep1.dll

@@ -63,7 +63,7 @@ public class Journals
         "What is one small habit I would like to start this week?",
         "If I could achieve any single goal in the next year, what would it be?",
        ];
-        int random_num = Random.Shared.Next(1, 14);
+        int random_num = Random.Shared.Next(0, 14);
         Console.WriteLine(prompts[random_num]);
         string Response = Console.ReadLine();
 
@@ -80,7 +80,7 @@ public class Journals
 
         if (repsonse == "yes")
         {
-            Console. WriteLine("What would you like to name the file?");
+            Console.WriteLine("What would you like to name the file?");
             string FileName = Console.ReadLine();
             FileName += ".txt";
             currentfile = FileName;

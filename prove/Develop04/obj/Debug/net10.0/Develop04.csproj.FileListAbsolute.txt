@@ -1,0 +1,15 @@
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\bin\Debug\net10.0\Develop04.exe
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\bin\Debug\net10.0\Develop04.deps.json
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\bin\Debug\net10.0\Develop04.runtimeconfig.json
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\bin\Debug\net10.0\Develop04.dll
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\bin\Debug\net10.0\Develop04.pdb
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\obj\Debug\net10.0\Develop04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\obj\Debug\net10.0\Develop04.AssemblyInfoInputs.cache
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\obj\Debug\net10.0\Develop04.AssemblyInfo.cs
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\obj\Debug\net10.0\Develop04.csproj.CoreCompileInputs.cache
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\obj\Debug\net10.0\Develop04.sourcelink.json
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\obj\Debug\net10.0\Develop04.dll
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\obj\Debug\net10.0\refint\Develop04.dll
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\obj\Debug\net10.0\Develop04.pdb
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\obj\Debug\net10.0\Develop04.genruntimeconfig.cache
+C:\Users\lacou\Desktop\Programming With Classes\Cedric-CSE-210\prove\Develop04\obj\Debug\net10.0\ref\Develop04.dll

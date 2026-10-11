@@ -1,20 +1,16 @@
-
-
-using System.ComponentModel.DataAnnotations;
-using System.Globalization;
-using System.Reflection.Metadata.Ecma335;
-using System.Security.AccessControl;
+using System;
+using System.Collections.Generic;
 
 public class Scriptures
 {
-    private Reference _reference; 
-    private List<Word> _words; 
+    private Reference _reference;
+    private List<Word> _words;
     private Random _random;
 
     public Scriptures(Reference reference, string text)
     {
-        _reference = reference; 
-        _words = new List<Word>(); 
+        _reference = reference;
+        _words = new List<Word>();
         _random = new Random();
         string[] words = text.Split(" ");
 
@@ -24,12 +20,11 @@ public class Scriptures
         }
     }
 
-
     public void Replacement(int amounttohide)
     {
-       int hiddenAmount = 0;
+        int hiddenAmount = 0;
 
-       while (hiddenAmount < amounttohide && !IsCompletelyHidden())
+        while (hiddenAmount < amounttohide && !IsCompletelyHidden())
         {
             int index = _random.Next(_words.Count);
 
@@ -39,7 +34,6 @@ public class Scriptures
                 hiddenAmount += 1;
             }
         }
-
     }
 
     public bool IsCompletelyHidden()
@@ -50,8 +44,8 @@ public class Scriptures
             {
                 return false;
             }
-
         }
+
         return true;
     }
 
@@ -60,13 +54,14 @@ public class Scriptures
         string result = "";
 
         foreach (Word word in _words)
-            {
-                result += word.GetDisplayText() + " ";
-            }
+        {
+            result += word.GetDisplayText() + " ";
+        }
 
-    return $"{_reference.AsString()}\n{result}";
-    }  
+        return $"{_reference.AsString()}\n{result}";
+    }
 }
+
 public class Reference
 {
     private string _book;
@@ -74,19 +69,20 @@ public class Reference
     private int _startVerse;
     private int _endVerse;
 
-    public Reference(string book, int chapter, int verse) 
-    { 
-        _book = book; 
-        _chapter = chapter; 
-        _startVerse = verse; 
-        _endVerse = verse; 
+    public Reference(string book, int chapter, int verse)
+    {
+        _book = book;
+        _chapter = chapter;
+        _startVerse = verse;
+        _endVerse = verse;
     }
-    public Reference(string book, int chapter, int startverse, int endverse) 
-    { 
-        _book = book; 
-        _chapter = chapter; 
-        _startVerse = startverse; 
-        _endVerse = endverse; 
+
+    public Reference(string book, int chapter, int startverse, int endverse)
+    {
+        _book = book;
+        _chapter = chapter;
+        _startVerse = startverse;
+        _endVerse = endverse;
     }
 
     public string AsString()
@@ -95,19 +91,21 @@ public class Reference
         {
             return $"{_book} {_chapter}:{_startVerse}";
         }
-
-        else return $"{_book} {_chapter}:{_startVerse}-{_endVerse}";
+        else
+        {
+            return $"{_book} {_chapter}:{_startVerse}-{_endVerse}";
+        }
     }
-
 }
+
 public class Word
 {
-    private string _text; 
+    private string _text;
     private bool _hidden;
 
     public Word(string text)
     {
-        _text = text; 
+        _text = text;
         _hidden = false;
     }
 
@@ -119,17 +117,15 @@ public class Word
     public void Hide()
     {
         _hidden = true;
-
     }
 
     public string GetDisplayText()
-{
-    if (_hidden)
     {
-        return new string('_', _text.Length);
+        if (_hidden)
+        {
+            return new string('_', _text.Length);
+        }
+
+        return _text;
     }
-
-    return _text;
 }
-}
-

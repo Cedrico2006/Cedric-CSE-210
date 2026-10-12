@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\lacou\\Desktop\\Programming With Classes\\Cedric-CSE-210\\prove\\Develop03\\Develop03.csproj": {}
+    "C:\\Users\\lacou\\Desktop\\Programming With Classes\\Cedric-CSE-210\\prove\\Develop03\\Develop03.csproj": {}
   },
   "projects": {
-    "c:\\Users\\lacou\\Desktop\\Programming With Classes\\Cedric-CSE-210\\prove\\Develop03\\Develop03.csproj": {
+    "C:\\Users\\lacou\\Desktop\\Programming With Classes\\Cedric-CSE-210\\prove\\Develop03\\Develop03.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\lacou\\Desktop\\Programming With Classes\\Cedric-CSE-210\\prove\\Develop03\\Develop03.csproj",
+        "projectUniqueName": "C:\\Users\\lacou\\Desktop\\Programming With Classes\\Cedric-CSE-210\\prove\\Develop03\\Develop03.csproj",
         "projectName": "Develop03",
-        "projectPath": "c:\\Users\\lacou\\Desktop\\Programming With Classes\\Cedric-CSE-210\\prove\\Develop03\\Develop03.csproj",
+        "projectPath": "C:\\Users\\lacou\\Desktop\\Programming With Classes\\Cedric-CSE-210\\prove\\Develop03\\Develop03.csproj",
         "packagesPath": "C:\\Users\\lacou\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\lacou\\Desktop\\Programming With Classes\\Cedric-CSE-210\\prove\\Develop03\\obj\\",
+        "outputPath": "C:\\Users\\lacou\\Desktop\\Programming With Classes\\Cedric-CSE-210\\prove\\Develop03\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lacou\\AppData\\Roaming\\NuGet\\NuGet.Config"

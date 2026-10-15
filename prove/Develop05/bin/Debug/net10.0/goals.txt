@@ -1,2 +1,3 @@
-0
+100
 Simple|CEDRIC|SCHACHER|100|False
+Eternal|CED|RIC|100

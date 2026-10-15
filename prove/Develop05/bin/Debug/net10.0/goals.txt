@@ -1,4 +1,2 @@
 0
-Simple|Cedric|Schacher|100|False
-Eternal|WOW|WFFA|100
-Checklist|BANANA|APPLE|20|10|20|0
+Simple|CEDRIC|SCHACHER|100|False

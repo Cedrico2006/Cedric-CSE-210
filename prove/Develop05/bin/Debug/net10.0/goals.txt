@@ -1,4 +1,4 @@
-600
-Simple|Cedic |WOW|100|True
-Eternal|DED|DDD|100
-List|WOW|FOOL|100|3|100|3
+0
+Simple|Cedric|Schacher|100|False
+Eternal|WOW|WFFA|100
+Checklist|BANANA|APPLE|20|10|20|0

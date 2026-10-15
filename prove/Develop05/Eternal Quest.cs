@@ -140,7 +140,6 @@ public class ListGoal : Goal
 
     public override string GetStringRepresentation()
     {
-        // Fixed: matches "Checklist" so loading works smoothly
         return $"Checklist|{GetName()}|{GetDescription()}|" + $"{GetPoints()}|{_targetAmount}|{_bonus}|" + $"{_amountCompleted}";
     }
 }

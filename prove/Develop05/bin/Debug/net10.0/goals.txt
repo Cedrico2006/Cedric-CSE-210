@@ -1,0 +1,4 @@
+600
+Simple|Cedic |WOW|100|True
+Eternal|DED|DDD|100
+List|WOW|FOOL|100|3|100|3

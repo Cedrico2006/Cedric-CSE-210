@@ -4,6 +4,8 @@ using System.Drawing;
 using System.Net.Http.Headers;
 using System.Reflection.Metadata;
 using System.Security.Cryptography;
+using System.Linq;
+using System.IO;
 
 public class RecipeCard
 {
@@ -105,6 +107,7 @@ public class Board : Storage
             if (_storage[cube.Key] > _limits[cube.Key])
             {
                  _points +=_storage[cube.Key] - _limits[cube.Key];
+                 _storage[cube.Key] = _limits[cube.Key];
 
             }
     
@@ -275,14 +278,14 @@ public class Player
         // play a card 
         // produce all possible cards (order TBD)
 
-        _hand.MoveCard(_hand.RandomCard(), _playedcards, _hand);
-        int _OtherPlayerPoints = _board.AddCubes(cauldron._storage);
+        _hand.MoveCard(deck.RandomCard(), _hand, deck);                 // draw
+        int _OtherPlayerPoints = _board.AddCubes(cauldron._storage);    // dump cauldron
         cauldron.Clear();
-        _hand.MoveCard(_hand.RandomCard(),_hand,_playedcards);
+        _hand.MoveCard(_hand.RandomCard(), _playedcards, _hand);        // play a card
 
-        foreach(RecipeCard card in _playedcards._deck)
+        foreach (RecipeCard card in _playedcards._deck)
         {
-            card.Brew(_cauldron,_board);
+            card.Brew(_cauldron, _board);
         }
         return _OtherPlayerPoints;
     }
@@ -323,7 +326,9 @@ public class Game
             );
             _players.Add(_player);
         }
+        
     }
+    
 
     
 public void Run(StackOfCards deck)
@@ -331,40 +336,101 @@ public void Run(StackOfCards deck)
     for (int i = 0; i < _players.Count; i++)
     {
         Player current = _players[i];
-
         int points = current.Turn(deck, current._cauldron);
 
         Player previous = _players[(i - 1 + _numberOfPlayers) % _numberOfPlayers];
-
         previous._points += points;
+    }
 
-        // Pass the cauldron and hand to the next player.
-        Player next = _players[(i + 1) % _numberOfPlayers];
-        current.PassingCardsAndCauldrons(next);
+    // Swapping each player with the last one rotates everything by one seat:
+    // [A,B,C,D] -> [D,A,B,C]
+    for (int i = 0; i < _players.Count - 1; i++)
+    {
+        _players[i].PassingCardsAndCauldrons(_players[_players.Count - 1]);
     }
 }
  
+public bool HasWinner(int winCondition,Game game) => game._players.Any(p => p._points >= winCondition);
+
 }
 public class Statisics
 {
-    int _rounds;
-    int _players;
-    double _averageScoreOfPlayers;
-
-    public void Data(Deck deck,int players,int wincondition)
+    // [points, board R,B,G,W,Bl, cauldron R,B,G,W,Bl]
+    public List<List<int>> Data(Deck deck, Game game)
     {
-        // Change Players here
-        int numberOfPlayers = players;
-        Game game = new Game(numberOfPlayers, deck);
-        int round = 1;
+        List<List<int>> _allPlayerRoundData = new List<List<int>>();
 
-        // Main game loop: Run rounds until someone reaches 5 points
-        while (!game._players.Any(p => p._points >= wincondition))
+        game.Run(deck);
+        //write data to player number and win conditon max (5,10) (player number, rounds until win, win conditon, average points of all players,)
+        foreach (Player player in game._players)
         {
-            game.Run(deck);
-            //write data to player number and win conditon max (5,10) (player number, rounds until win, win conditon, average points of all players,)
+            int points = player._points;
 
-            round++;
+            Dictionary<string, int> _boardStorage = player._board._storage;
+                int _boardReds = _boardStorage["red"];
+                int _boardBlues = _boardStorage["blue"];
+                int _boardGreens = _boardStorage["green"];
+                int _boardWhites = _boardStorage["white"];
+                int _boardBlacks = _boardStorage["black"];
+
+            Dictionary<string, int> _cauldronStorage = player._cauldron._storage;
+                int _cauldronReds = _cauldronStorage["red"];
+                int _cauldronBlues = _cauldronStorage["blue"];
+                int _cauldronGreens = _cauldronStorage["green"];
+                int _cauldronWhites = _cauldronStorage["white"];
+                int _cauldronBlacks = _cauldronStorage["black"];
+
+            List<int> _roundData = new()
+            {
+                points,
+                _boardReds, _boardBlues, _boardGreens, _boardWhites, _boardBlacks,
+                _cauldronReds, _cauldronBlues, _cauldronGreens, _cauldronWhites, _cauldronBlacks
+            };
+            _allPlayerRoundData.Add(_roundData);
         }
+        return _allPlayerRoundData;
+    }
+
+    private double Mean(int score, int rounds)
+    {
+        return (double)score / rounds;
+    }
+
+    public string DataMath(List<List<List<int>>> data)
+    {
+        int rounds = data.Count;
+        int players = data[0].Count;
+        string finalOutput = $"The game went for {rounds} rounds\n";
+        string[] names = { "R", "B", "G", "W", "Bl" };
+
+        // I asked my cousin for help and he showed me this cool trick for unpacking nested lists
+
+        for (int p = 0; p < players; p++)
+        {
+            
+            int[] totals = new int[11]; 
+            foreach (List<List<int>> round in data)
+            {
+                for (int s = 0; s < 11; s++)
+                {
+                    totals[s] += round[p][s];
+                }
+            }
+
+            
+            double averagePointsPerRound = Mean(data[rounds - 1][p][0], rounds);
+
+            finalOutput += $"\nPlayer: {p + 1}\n Points per round {averagePointsPerRound:F2}\n";
+
+            for (int c = 0; c < 5; c++)
+            {
+                finalOutput += $" {names[c]} on the Board {Mean(totals[1 + c], rounds):F2}\n";
+            }
+            for (int c = 0; c < 5; c++)
+            {
+                finalOutput += $" {names[c]} in the Cauldron {Mean(totals[6 + c], rounds):F2}\n";
+            }
+        }
+        return finalOutput;
     }
 }

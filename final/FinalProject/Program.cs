@@ -6,16 +6,27 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Initialize and populate the deck from Deck.txt
-        Deck deck = new Deck(new List<RecipeCard>());
+        List<RecipeCard> stack = new List<RecipeCard>();
+        Deck deck = new Deck(stack);
         deck.MakeDeck();
 
-        if (deck._deck.Count == 0)
-        {
-            Console.WriteLine("Deck is empty! Please check Deck.txt.");
-            return;
-        }
+        Console.WriteLine("How many Players would you like (max 5)?");
+        int numberOfPlayers = int.Parse(Console.ReadLine());
 
+        Game game = new Game(numberOfPlayers, deck);
+        int round = 1;
+
+
+        Statisics stats = new Statisics();
+        List<List<List<int>>> _alldata = new List<List<List<int>>>();
+
+        while (round <= 100 && !game.HasWinner(5,game))
+        {
+            List<List<int>> _allPlayerRoundData = stats.Data(deck, game);
+            _alldata.Add(_allPlayerRoundData);
+            round++;
+        }
         
+        Console.WriteLine(stats.DataMath(_alldata));
     }
 }
